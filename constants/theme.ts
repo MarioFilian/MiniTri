@@ -1,29 +1,54 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * Paleta de colores de la Selección Ecuatoriana de Fútbol.
+ * Basada en el escudo oficial de la FEF y los colores de la bandera.
  */
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+// Colores principales de la selección
+export const EcuadorColors = {
+  navyBlue: '#1B2A4A',
+  darkNavy: '#0D1B2A',
+  gold: '#C5A55A',
+  goldLight: '#D4B96E',
+  yellow: '#FFD100',
+  flagBlue: '#1C2C6C',
+  red: '#CE1126',
+  white: '#FFFFFF',
+  offWhite: '#F5F5F0',
+  grayLight: '#E8E8E8',
+  grayMedium: '#8A8A8A',
+};
+
+const tintColorLight = EcuadorColors.navyBlue;
+const tintColorDark = EcuadorColors.gold;
 
 export const Colors = {
   light: {
     text: '#11181C',
-    background: '#fff',
+    background: EcuadorColors.offWhite,
     tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
+    icon: EcuadorColors.navyBlue,
+    tabIconDefault: EcuadorColors.grayMedium,
     tabIconSelected: tintColorLight,
+    card: EcuadorColors.white,
+    cardBorder: EcuadorColors.gold,
+    accent: EcuadorColors.gold,
+    headerBackground: EcuadorColors.navyBlue,
+    headerText: EcuadorColors.white,
   },
   dark: {
     text: '#ECEDEE',
-    background: '#151718',
+    background: EcuadorColors.darkNavy,
     tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
+    icon: EcuadorColors.goldLight,
+    tabIconDefault: '#6B7280',
     tabIconSelected: tintColorDark,
+    card: '#1A2744',
+    cardBorder: EcuadorColors.gold,
+    accent: EcuadorColors.gold,
+    headerBackground: EcuadorColors.darkNavy,
+    headerText: EcuadorColors.white,
   },
 };
 
