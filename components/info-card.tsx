@@ -20,7 +20,7 @@ export function InfoCard({ title, icon, children }: InfoCardProps) {
     <View style={[styles.card, { backgroundColor: cardBg, borderColor: cardBorder }]}>
       <View style={styles.cardHeader}>
         {icon && <Text style={styles.cardIcon}>{icon}</Text>}
-        <Text style={[styles.cardTitle, { color: EcuadorColors.navyBlue }]}>{title}</Text>
+        <Text style={[styles.cardTitle, { color: Colors[colorScheme].cardTitle }]}>{title}</Text>
       </View>
       <View style={styles.cardDivider} />
       <View style={styles.cardContent}>
@@ -60,7 +60,7 @@ export function AchievementBadge({ icon, title, description }: AchievementBadgeP
   return (
     <View style={[styles.badge, { backgroundColor: cardBg }]}>
       <Text style={styles.badgeIcon}>{icon}</Text>
-      <Text style={[styles.badgeTitle, { color: EcuadorColors.navyBlue }]}>{title}</Text>
+      <Text style={[styles.badgeTitle, { color: Colors[colorScheme].cardTitle }]}>{title}</Text>
       <Text style={[styles.badgeDescription, { color: Colors[colorScheme].text }]}>
         {description}
       </Text>

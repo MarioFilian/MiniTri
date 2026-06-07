@@ -43,7 +43,7 @@ function AnimatedSection({ icon, title, children, delay }: SectionProps) {
     >
       <View style={styles.sectionHeader}>
         <Text style={styles.sectionIcon}>{icon}</Text>
-        <Text style={[styles.sectionTitle, { color: EcuadorColors.navyBlue }]}>{title}</Text>
+        <Text style={[styles.sectionTitle, { color: Colors[colorScheme].cardTitle }]}>{title}</Text>
       </View>
       <View style={styles.sectionDivider} />
       {children}
@@ -122,6 +122,10 @@ export default function InformationScreen() {
             name="Moisés Caicedo"
             description="Joven estrella del Chelsea FC, representante de la nueva generación dorada del fútbol ecuatoriano."
           />
+          <LegendItem
+            name="William Pacho"
+            description="Destacado defensa central que milita en el Paris Saint-Germain (PSG), referente de la zaga y muralla de La Tri en Europa."
+          />
         </AnimatedSection>
 
         {/* Datos curiosos */}
@@ -161,7 +165,7 @@ function LegendItem({ name, description }: { name: string; description: string }
   const colorScheme = useColorScheme() ?? 'light';
   return (
     <View style={styles.legendItem}>
-      <Text style={styles.legendName}>{name}</Text>
+      <Text style={[styles.legendName, { color: Colors[colorScheme].cardTitle }]}>{name}</Text>
       <Text style={[styles.legendDescription, { color: Colors[colorScheme].text }]}>
         {description}
       </Text>

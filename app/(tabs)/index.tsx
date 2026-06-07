@@ -154,7 +154,7 @@ export default function HomeScreen() {
         {/* Fun fact */}
         <View style={[styles.funFactCard, { backgroundColor: Colors[colorScheme].card }]}>
           <Text style={styles.funFactIcon}>💡</Text>
-          <Text style={[styles.funFactTitle, { color: EcuadorColors.navyBlue }]}>
+          <Text style={[styles.funFactTitle, { color: Colors[colorScheme].cardTitle }]}>
             ¿Sabías que?
           </Text>
           <Text style={[styles.funFactText, { color: Colors[colorScheme].text }]}>
